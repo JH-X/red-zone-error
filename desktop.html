@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="scripts/overlay.js" type="text/javascript"></script>
+	<script src="scripts/mouseclick.js" type="text/javascript"></script>
+  <title>Desktop</title>
+  </head>
+<body>
+	
+	<div class="videoWrapper">
+		<div class="videoContainer">
+			<div id="ytplayer"></div>
+		</div>
+	</div>
+	
+	<div class="overlayWrapper" id="overlayWrapper">
+		<div class="videoMask"></div>
+		<div class="overlayContainer" id="overlayContainer">
+			<div class="start-button" id="start-button" draggable="false">
+				<div id="start-button-default"></div>
+				<div id="start-button-hover"></div>
+				<div id="start-button-clicked"></div>
+			</div>
+			<div id="icon-computer"><div id="icon-computer-image"></div></div>
+			<div id="highlight-computer"></div>
+			<div id="icon-recycle"><div id="icon-recycle-image"></div></div>
+			<div id="highlight-recycle"></div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+	<script type="text/javascript">
+		var player;
+		var isReady = false;
+		
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('ytplayer', {
+				videoId: '5BZLz21ZS_Y',
+				playerVars: {
+					enablejsapi: 1,
+					controls: 0,
+					disablekb: 1,
+					fs: 0,
+					modestbranding: 1,
+					iv_load_policy: 3,
+					showinfo: 0,
+					showtitle: 0,
+					autohide: 0,
+					rel: 0
+				},
+				allowfullscreen: 1,
+				frameborder: 0,
+				events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				}
+			});
+		}
+		
+		// 4. The API will call this function when the video player is ready.
+		function onPlayerReady(event) {
+			isReady = true;
+		}
+		
+		function onPlayerStateChange(event) {
+			if(event.data === YT.PlayerState.ENDED) {
+				showOverlay();
+			}
+		}
+		
+	</script>
+</body>
+</html>

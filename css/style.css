@@ -1,0 +1,177 @@
+body {
+	margin:0;
+	padding:0;
+	background-color: black;
+	overflow: hidden;
+}
+
+.overlayContainer {
+	display: none;
+	width: 1920px;
+	height: 1080px;
+	text-align: center;
+	background-image: url(../images/desktop-clean.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+    background-position: center center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -o-transform-origin: center center;
+    -ms-transform-origin: center center;
+	transform-origin: center center;
+	overflow: hidden;
+}
+
+.videoMask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+}
+
+.videoWrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.videoContainer,
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+	overflow: hidden;
+}
+
+#start-button {
+	position: absolute;
+	width: 80px;
+	height: 56px;
+	left: 0;
+	bottom: 0;
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+#start-button-default {
+	opacity: 1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/start-button/start-button-default.png);
+	background-position: center, center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#start-button-hover {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/start-button/start-button-hover.png);
+	background-position: center, center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#start-button-clicked {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/start-button/start-button-clicked.png);
+	background-position: center, center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+#icon-computer {
+	z-index: 1;
+	position: absolute;
+	top: 18px;
+	left: 12px;
+}
+
+#icon-computer-image {
+	width: 83px;
+	height: 90px;
+	background-image: url(../images/icons/computer.png);
+	background-position: center, center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#highlight-computer {
+	position: absolute;
+	top: 12px;
+	left: 4px;
+	width: 94px;
+	height: 94px;
+}
+
+#icon-computer:hover + #highlight-computer {
+	background-color: rgb(102, 204, 255, 0.5);
+	border: 2px solid rgb(128, 223, 255, 0.7);
+	border-radius: 3px;
+}
+
+#icon-computer:active + div#highlight-computer {
+	background-color: rgb(102, 204, 255, 0.85);
+	border: 2px solid rgb(128, 223, 255, 0.7);
+	border-radius: 3px;
+}
+
+#icon-recycle {
+	z-index: 1;
+	position: absolute;
+	top: 161px;
+	left: 8px;
+}
+
+#icon-recycle-image {
+	width: 90px;
+	height: 93px;
+	background-image: url(../images/icons/recycle.png);
+	background-position: center, center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#highlight-recycle {
+	position: absolute;
+	top: 157px;
+	left: 4px;
+	width: 94px;
+	height: 94px;
+}
+
+#icon-recycle:hover + #highlight-recycle {
+	background-color: rgb(102, 204, 255, 0.5);
+	border: 2px solid rgb(128, 223, 255, 0.7);
+	border-radius: 3px;
+}
+
+#icon-recycle:active + #highlight-recycle {
+	background-color: rgb(102, 204, 255, 0.85);
+	border: 2px solid rgb(128, 223, 255, 0.7);
+	border-radius: 3px;
+}
