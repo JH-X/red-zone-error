@@ -103,15 +103,14 @@ body {
 	background-repeat: no-repeat;
 }
 
-
-#icon-computer {
+#icon-computer .icon-box {
 	z-index: 1;
 	position: absolute;
 	top: 18px;
 	left: 12px;
 }
 
-#icon-computer-image {
+#icon-computer .image {
 	width: 83px;
 	height: 90px;
 	background-image: url(../images/icons/computer.png);
@@ -120,34 +119,26 @@ body {
 	background-repeat: no-repeat;
 }
 
-#highlight-computer {
+#icon-computer .highlight {
 	position: absolute;
 	top: 12px;
 	left: 4px;
 	width: 94px;
 	height: 94px;
-}
-
-#icon-computer:hover + #highlight-computer {
-	background-color: rgb(102, 204, 255, 0.5);
-	border: 2px solid rgb(128, 223, 255, 0.7);
+	border-color: rgba(128, 223, 255, 0.7);
+	border-width: 2px;
+	border-style: hidden;
 	border-radius: 3px;
 }
 
-#icon-computer:active + div#highlight-computer {
-	background-color: rgb(102, 204, 255, 0.85);
-	border: 2px solid rgb(128, 223, 255, 0.7);
-	border-radius: 3px;
-}
-
-#icon-recycle {
+#icon-recycle .icon-box  {
 	z-index: 1;
 	position: absolute;
 	top: 161px;
 	left: 8px;
 }
 
-#icon-recycle-image {
+#icon-recycle .image {
 	width: 90px;
 	height: 93px;
 	background-image: url(../images/icons/recycle.png);
@@ -156,22 +147,14 @@ body {
 	background-repeat: no-repeat;
 }
 
-#highlight-recycle {
+#icon-recycle .highlight {
 	position: absolute;
 	top: 157px;
 	left: 4px;
 	width: 94px;
 	height: 94px;
-}
-
-#icon-recycle:hover + #highlight-recycle {
-	background-color: rgb(102, 204, 255, 0.5);
-	border: 2px solid rgb(128, 223, 255, 0.7);
-	border-radius: 3px;
-}
-
-#icon-recycle:active + #highlight-recycle {
-	background-color: rgb(102, 204, 255, 0.85);
-	border: 2px solid rgb(128, 223, 255, 0.7);
+	border-color: rgba(128, 223, 255, 0.7);
+	border-width: 2px;
+	border-style: hidden;
 	border-radius: 3px;
 }
